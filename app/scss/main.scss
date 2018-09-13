@@ -1,0 +1,126 @@
+@import "_vars.scss";
+// @import "_fonts.scss";
+@import "_libs.scss";
+
+::placeholder{
+
+	color: #666;
+}
+
+::selection{
+	background-color: $accent;
+	color: #fff;
+
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+	background-color: #232526;
+	background-image: url(../img/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	input, textarea{
+			border: #666 1px solid;
+			outline: none;
+			&:focus:required:invalid{
+				border-color: red;
+			}
+			&:required:valid{
+				border-color: green;
+			}
+
+	}
+
+}
+
+.img-responsive{
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+}
+
+.text-center{
+	text-align: center;
+}
+.topbanner{
+	padding: 10px 0;
+	background-color: #dca119;
+	text-align: center;
+	position: relative;
+	&__container {
+		position: relative;
+	}
+	&__close {
+		cursor: pointer;
+		top: calc(50% - 7px);
+		position: absolute;
+		right: 15px;
+		width: 14px;
+		height: 14px;
+		background: url(../img/topbanner__close.png) no-repeat center;
+	}
+	&__slider {
+		font-size: 14px;
+		text-transform: uppercase;
+		&-element {
+			overflow: hidden;
+		}
+		&-promo {
+			padding: 10px;
+			text-align: center;
+			background-color: #e7bd5e;
+			border-radius: 8px;
+			display: inline-block;
+		}
+		&-icon {
+			margin:0 10px;
+			display: inline-block !important;
+			width: 24px !important;
+			height: 24px;
+		}
+		&-white {
+			color: #fff;
+
+		}
+		&-black {
+			display: inline-block;
+		}
+	}
+.owl-nav {
+	position: absolute;
+	width: 100%;
+	top: calc(50% - 9px);
+}
+
+.owl-prev{
+	outline: none;
+	position: absolute;
+	width: 10px;
+	height: 18px;
+	left: 15px;
+	background: url(../img/arrow_left.png) no-repeat !important;
+}
+.owl-next{
+	outline: none;
+	position: absolute;
+	right: 15px;
+	width: 10px;
+	height: 18px;
+	background: url(../img/arrow_right.png) no-repeat !important;
+}
+}
+header {
+
+}
+
+@import "media.scss"; // Always at the end
