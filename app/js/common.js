@@ -7,6 +7,7 @@ $(function() {
 	  	navText:false,
 	  	dots:false
 	  });
+	  $('.select').select2();
 	});
 
 });

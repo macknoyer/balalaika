@@ -15,7 +15,8 @@
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 	<!-- Template Basic Images End -->
 	
 	<!-- Custom Browsers Color Start -->
@@ -55,7 +56,36 @@
 		</div>
 	</div>
 	<header>
-		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 d-flex align-items-center">
+
+					<ul class="menu">
+						<li><a class="menu__humburger" href="#"><i class="fas fa-bars"></i></a></li>
+						<li><a href="#">home</a></li>
+						<li><a href="#">how it works</a></li>
+						<li><a href="#">reviews</a></li>
+					</ul>
+					<div class="select__container">
+						<select name="lang" id="" class="select">
+							<option value="EN">EN</option>
+							<option value="RUS">RUS</option>
+							<option value="EU">EU</option>
+						</select>
+					</div>
+					<div class="menu__search">
+						<i class="fas fa-search"></i>
+						<input type="text" class="menu__search-input" placeholder="Search">
+					</div>
+				</div>
+				<div class="col-lg-4 d-flex justify-content-end">
+					<div class="headerLogin">
+						<a href="#" class="headerLogin__auth">Login</a>
+						<a href="#" class="headerLogin__cart"><i class="fas fa-shopping-cart"></i><span>1</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 	<div class="container">
 		<div class="row">
@@ -72,6 +102,7 @@
 	</footer>
 
 	<script src="js/scripts.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 </body>
 </html>

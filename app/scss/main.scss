@@ -1,23 +1,19 @@
-@import "_vars.scss";
-// @import "_fonts.scss";
-@import "_libs.scss";
+@import "vars";
+@import "fonts";
+@import "libs";
 
-::placeholder{
-
+::placeholder {
 	color: #666;
 }
 
-::selection{
+::selection {
 	background-color: $accent;
 	color: #fff;
-
 }
-
-html, body{
-	height: 100%;
+a,:hover {
+	text-decoration: none;
 }
-
-body{
+body {
 	background-color: #232526;
 	background-image: url(../img/bg.png);
 	background-repeat: no-repeat;
@@ -28,35 +24,40 @@ body{
 	line-height: 1.65;
 	font-family: $default-font;
 	overflow-x: hidden;
-	input, textarea{
-			border: #666 1px solid;
-			outline: none;
-			&:focus:required:invalid{
-				border-color: red;
-			}
-			&:required:valid{
-				border-color: green;
-			}
-
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
 	}
-
 }
 
-.img-responsive{
+.img-responsive {
 	display: block;
 	max-width: 100%;
 	height: auto;
-
+	&.img-width {
+		width: 100%;
+	}
 }
 
-.text-center{
+.text-center {
 	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
 }
 .topbanner{
 	padding: 10px 0;
 	background-color: #dca119;
 	text-align: center;
 	position: relative;
+	margin-bottom: 21px;
 	&__container {
 		position: relative;
 	}
@@ -76,11 +77,12 @@ body{
 			overflow: hidden;
 		}
 		&-promo {
-			padding: 10px;
 			text-align: center;
 			background-color: #e7bd5e;
 			border-radius: 8px;
 			display: inline-block;
+			font-size: 14px;
+			padding: 5px 10px;
 		}
 		&-icon {
 			margin:0 10px;
@@ -120,7 +122,115 @@ body{
 }
 }
 header {
+	.menu {
+		margin: 0;
+		padding: 0;
+		margin-right: 33px;
+		li {
+			display: inline-block;
+			margin-right: 22px;
+			a {
+				font-size: 15px;
+				text-transform: uppercase;
+				color: #fff;
+				opacity: 0.6;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+			&__humburger {
+				opacity: 1 !important;
+				.fa {
+					color: #fff;
 
+				}
+
+			}
+			&__search {
+				background-color: rgba(0,0,0, 0.3);
+				border-radius: 4px;
+				padding: 0px 10px;
+				.fas {
+					color: #fff;
+					font-size: 13px;
+				}
+				&-input {
+					font-size: 13px;
+				color: #fff;
+				background-color:transparent;
+				border:none;
+				height: 36px;
+				border-radius: 5px;
+				text-transform: uppercase;
+					&::placeholder {
+						color: #fff;
+						opacity: 1;
+					}
+				}
+			}
+	}
+	.select {
+		&__container {
+			margin-right: 6px;
+		}
+	}
 }
-
-@import "media.scss"; // Always at the end
+.humburger {
+	font-size: 17px;
+}
+.select {
+	&__container {
+		display: inline-block;
+		.select2-container .select2-selection--single {
+			height: 36px;
+		}
+		.select2-container--default .select2-selection--single {
+			border: none;
+			background-color: rgba(0,0,0, 0.3);
+			.select2-selection__rendered {
+				color: #fff;
+				line-height: 36px;
+				font-size: 13px;
+			}
+			.select2-selection__arrow {
+				top: 4px;
+				right: 2px;
+				b {
+					border-color: #fff transparent transparent transparent;
+				}
+			}
+		}
+	}
+}
+.select2-dropdown {
+	border: none;
+	font-size: 13px;
+	background-color:  rgba(0,0,0, 0.3);
+	color: #fff;
+}
+.headerLogin {
+	a {
+		background-color: rgba(0,0,0, 0.3);
+		border-radius: 4px;
+		display: inline-block;
+		color: #fff;
+		line-height: 36px;
+		padding: 0px 14px;
+		text-transform: uppercase;
+		font-size: 13px;
+	}
+	&__cart {
+		span {
+			background-color: #62a376;
+			border-radius: 50%;
+			font-family: 'AvenirNextBold', sans-serif;
+			display: inline-block;
+			position: absolute;
+			width: 15px;
+			height: 15px;
+		}
+	}
+	
+}
+@import "media"; // Always at the end

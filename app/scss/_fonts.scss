@@ -1,6 +1,6 @@
-@import "_mixins/font-face.scss";
+@import "_mixins/font-face";
 
-+font-face ("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-// +font-face ("wafle", "../fonts/wafle/MADEWaffleSoft");
-+font-face ("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
-
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("wafle", "../fonts/wafle/wafle");
+@include font-face("AvenirNextBold", "../fonts/AvenirNextBold/AvenirNextBold");
