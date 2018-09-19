@@ -317,9 +317,121 @@ header {
 			height: 147px;
 			display: inline-block;
 		}
-		.wow-text {
-			font-family: 'AvenirNextRegular' sans-serif;
+	}
+	&_link {
+			font-family: "AvenirNextRegular", sans-serif;
+			color: #fff;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+	}
+	&_button {
+		position: absolute;
+		bottom: 0px;
+	    background-color: #929292;
+	    color: #fff;
+	    padding: 0 20px;
+	    text-transform: capitalize;
+	    line-height: 40px;
+	    text-transform: uppercase;
+	    height: 40px;
+	    font-size: 15px;
+	    -webkit-border-radius: 5px;
+	    border-radius: 5px;
+	    display: inline-block;		
+	}
+}
+.raid_calendar {
+	background-color: #27292a;
+	border-radius: 10px;
+	&-container {
+		padding: 0;
+	}
+	&-scroll {
+		max-height: 350px;
+		overflow: auto;
+		padding: 45px 15px 35px 22px;
+	}
+	&-date {
+		line-height: 36px;
+		color: $yellow;
+		font-size: 32px;
+	}
+	&-block {
+		margin-right: 45px;
+		border-bottom: 1px solid #545555;
+		padding-bottom: 17px;
+		margin-bottom: 17px;
+	}
+	&-time {
+		font-family: "AvenirNextRegular", sans-serif;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 13px;
+		opacity: 0.7;
+	}
+	&-text {
+		margin-top: 20px;
+		font-size: 15px;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	&-button {
+		background-color: #62a376;
+		color: #fff;
+		padding: 0 20px;
+		text-transform: capitalize;
+		line-height: 40px;
+		text-transform: uppercase;
+		height: 40px;
+		font-size: 15px;
+		border-radius: 5px;
+		display: inline-block;
+	}
+	&-head {
+		span {
+			border-top-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			display: inline-block;
+			background: #ce991e;
+			padding: 0 15px;
+			height: 40px;
+			line-height: 38px;
+			text-transform: uppercase;
+			color: #fff;
+			position: relative;
+			padding-left: 45px;
+			&:before {
+				color: #fff;
+				content: '';
+				background: url(../img/raid_calendar.svg) no-repeat;
+				background-size: contain;
+				width: 22px;
+				height: 22px;
+				display: inline-block;
+				position: absolute;
+				left: 15px;
+				top: 7px;
+			}
 		}
 	}
 }
+/*scrollbar*/
+.mCSB_inside > .mCSB_container {
+	margin-right: 0;
+}
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail {
+	background-color: transparent;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	width: 13px;
+}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #5b5d5e !important;
+	background-image: url(../img/scroll_lines.png) !important;
+	background-repeat: no-repeat !important;
+	background-position: center;
+}
+/*scrollbar*/
 @import "media"; // Always at the end

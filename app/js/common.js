@@ -9,5 +9,9 @@ $(function() {
 	  });
 	  $('.select').select2();
 	});
-
+    $(window).on("load",function(){
+        $(".raid_calendar-scroll").mCustomScrollbar({
+        	theme:"dark"
+        });
+    });
 });
