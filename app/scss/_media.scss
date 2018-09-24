@@ -6,16 +6,241 @@
 // ≥1200px
 @include media-breakpoint-down(lg) {
 	
+.header {
+	&_bottom {
+		&-intro {
+			font-size: 20px;
+			line-height: 24px;
+			margin-top: 0;
+			text-align: center;
+		}
+		&-button {
+			margin-bottom: 36px;
+			width: 100%;
+		}
+		&-description {
+			font-size: 20px;
+		}
+	}
+}
+header {
+	.menu {
+		display: none;
+		position: absolute;
+		width: 100%;
+		background: #000;
+		top: 35px;
+		z-index: 1;
+		padding: 15px;
+		li {
+			display: block;
+		}
+		&__humburger {
+			color: #fff;
+		 	display: inline-block;
+		 	.fas {
+
+		 	margin-right: 10px;
+		 	}
+		}
+		&__search {
+			display: none;
+		}
+	}
+		.select__container {
+			display: none;
+		}
+}
 }
 
 // ≥992px
 @include media-breakpoint-down(md) {
+	body {
+		background-position: center 79px;
+		background-size: contain;
+	}
+	h1 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.margin_top100 {
+		margin-top: 50px;
+	}
+	.offers {
+		&_wrapper {
+			background: none;
+		}
+		.game-logo {
+		}
+	}
+	.support_button {
+		&.mobile {
+			position: absolute;
+			left: calc(50% - 110px);
+			text-outline: 15px;
+		}
+	}
+	.display_mobile {
+		display: block;
+		&_none{
+			display: none !important;
+		}
+	}
 
+.headerLogin {
+	&__auth {
+		display: none !important;
+	}
+}
+.logo {
+	margin: auto;
+	width: 103px;
+	height: 107px;
+	background-size: contain;
+	margin-bottom: 57px;
+}
+.green_link {
+	&.reviews {
+		display: none;
+	}
+	}
+	.offers {
+		&_link {
+			display: none;
+		}
+		&.small {
+			height: 86px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		.game-logo {
+				background-size: contain !important;
+			&.hearths_logo {
+				width: 98px;
+				height: 29px;
+			}
+			&.overwatch_logo {
+				width: 85px;
+				height: 36px;
+
+			}
+			&.destiny_logo {
+				width: 94px;
+				height: 50px;
+			}
+			&.csgo_logo{
+				width: 85px;
+				height: 36px;
+			}
+		}
+	}
+	.offers_button {
+		display: none;
+		text-transform: uppercase;
+		background-color: #232526;
+		height: 50px;
+		line-height: 48px;
+		color: #fff;
+		opacity: 0.7;
+
+	}
+	.raid_calendar {
+		&-mobile {
+			display: inline-block;
+		}
+		&-border {
+			border-right: none;
+		}
+	}
+	.filter {
+		margin-bottom: 30px;
+	}
+	.trustpoint {
+		&_reviews{
+			display: none;
+		}
+		&_wrapper {
+			width: 100%;
+		}
+		&_review {
+			width: 100%;
+			background-position: center;
+			&-mobile {
+				display: block !important;
+
+			}
+		}
+
+	}
+	.tabs__list {
+		li {
+			width: 100%;
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+	.footer {
+		padding-top: 0;
+		background: none;
+	.advantage_block {
+		height: 145px;
+		&-text {
+			margin-bottom: 20px;
+		}
+		&-title {
+			font-size: 16px;
+		}
+		&-icon {
+			width: 63px;
+			height: 70px;
+		}
+	}
+		&_container {
+			display: none;
+		}
+
+	}
+	.submenu {
+		a {
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
+	.product_benefits {
+		&-imgblock {
+			border-radius:0;
+		}
+	}
+	.total {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-radius: 10px;
+		margin: 0 15px;
+		margin-top: 25px;
+		background-color: #111;
+		.raid_calendar-button {
+			width: 100%;
+		}
+	}
 }
 
 // ≥768px
 @include media-breakpoint-down(sm) {
+	.social {
+	    position: absolute;
+	    margin-top: -159px;
+	    right: 15px;
+	    li {
+	    	text-align: center;
+	    	margin-right: 0;
+	    	display: block;
+	    	a {
+	    		width: 21px;
+	    		height: 21px;
+	    	}
+	    }
 
+	}	
 }
 
 // ≥576px
