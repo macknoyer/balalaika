@@ -75,6 +75,10 @@ input[type="text"].textfield {
 	height: 45px;
 	padding: 0 15px;
 	text-transform: uppercase;
+	&.inlinetextfeild {
+		display: inline-block;
+		margin-left: 10px;
+	}
 }
 .textfield {
 	&_container {
@@ -85,6 +89,9 @@ input[type="text"].textfield {
 		color: #111;
 		font-size: 13px;
 		font-family: "ProximaRegular", sans-serif;
+		&.inlinetitle {
+			display: inline-block;
+		}
 	}
 }
 textarea {
@@ -1392,6 +1399,25 @@ header {
 	overflow: hidden;
 	margin-top: 30px;
 	background-color: #1a1c1d;
+	&-buttonbuy {
+		margin: 20px 0px;
+		.button {
+			font-size: 22px;
+			padding:0 40px;
+			height: 60px;		
+		}
+		.checkbox_container input + label:before {
+			margin-top: 1px;
+			background-color: #303334;	
+		}
+
+		.checkbox_container input:checked+label {
+				&:before {
+				background-color: $yellow;
+
+				}
+			}
+	}
 	&-tabs {
 		margin-bottom: 30px;
 		background-color:#1a1c1d;
@@ -1445,6 +1471,7 @@ header {
 		height: 80px;
 		overflow: hidden;
 		border-radius: 10px;
+		display: block;
 	}
 	&-title {
 		font-size: 18px;
@@ -1480,7 +1507,47 @@ header {
 	}
 	&-info {
 		background-color: #fff;
-		padding: 0px 20px 20px 20px;
+		padding: 20px 20px 20px 20px;
+		border-bottom: 1px solid #111;	
+	}
+	&-infotitle {
+		font-size: 26px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		span {
+			font-size: 24px;
+			text-transform: none;
+		}
+		a {
+			color: $yellow;
+			border-bottom: 1px solid $yellow;
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+	&-tooltip {
+		text-align: center;
+		padding: 4px 8px;
+		background-color: #ebecf0;
+		font-family: "ProximaRegular", sans-serif;
+		font-size: 14px;
+		border-radius: 5px;
+		display: inline-block;
+		text-transform: none;
+		position: relative;
+		margin-left: 5px;
+		&:before {
+			position: absolute;
+			content: "";
+			width: 0; 
+			height: 0; 
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent; 
+			border-right:5px solid #ebecf0; 
+			left: -5px;
+			top: calc(50% - 5px);
+		}
 	}
 }
 .footer {
