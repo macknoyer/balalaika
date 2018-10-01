@@ -243,6 +243,25 @@ header {
 			margin-bottom: 20px;
 		}
 	}
+	.calendar {
+		&_header {
+			display: none;
+			&.mobile {
+				display: flex;
+			}
+		}
+		&_date {
+			&.offers {
+				margin-right: -3px;
+			}
+		}
+		&_block {
+ 			.raid_calendar-button {
+    			padding: 0 10px;
+ 			}
+
+		}
+	}
 }
 
 // ≥768px

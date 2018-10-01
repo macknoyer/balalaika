@@ -1550,6 +1550,149 @@ header {
 		}
 	}
 }
+.calendar {
+	border-radius: 10px;
+	overflow: hidden;
+	margin-top: 35px;
+	&_wrap {
+		background-color: rgba(0, 0, 0, 0.15);
+	}
+	&_header {
+		padding: 15px;
+		background-color:#151617;
+		margin-bottom: 10px;
+		&.mobile {
+			display: none;
+		}
+	}
+	&_nav {
+		color: #fff !important;
+		font-size: 14px;
+		line-height: 32px;
+		a {
+			color: #fff;
+			.fas {
+				margin-right: 10px;
+				color: #fff;
+				font-size: 32px;
+				vertical-align: middle;
+				display: inline-block;
+			}
+		}
+		.fas {
+			margin-right: 10px;
+			color: #fff;
+			font-size: 32px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+		&.next {
+			.fas {
+				margin-left: 5px;
+				margin-right: 0;
+			}
+		}
+		span {
+			border-radius: 3px;
+			margin-left: 5px;
+			text-align: center;
+			display: inline-block;
+			color: #fff;
+			padding: 0px 4px;
+			line-height: 20px;
+			background-color: #000;
+			opacity: .3;
+		}
+		&.prev {
+			opacity: .3;
+		}
+	}
+	&_container {
+		padding: 15px;
+	}
+	&_date {
+		padding: 0px 0px 15px 20px;
+		border-bottom: 1px solid #232526;
+		white-space: nowrap;
+		position: relative;
+		.raid_calendar-date {
+			font-size: 24px !important;
+		}
+		&-wrap {
+			border-bottom: 1px solid #232526;
+		}
+		span {
+			display: inline-block;
+			color:#fff;
+			text-transform: uppercase;
+		}
+		.offers {
+			top: 0;
+			right: 0px;
+			margin-right: 	4px;
+			background-color: #000000;
+			border-radius: 3px;
+			padding: 0 4px;
+			line-height: 16px;
+			font-size: 13px;
+			position: absolute;
+			color: #1c1e1e;
+		}
+		&.current {
+			border-bottom: 5px solid #ad5d47;	
+		}
+		&.empty {
+			.raid_calendar-date {
+				color: #373838;
+			}
+		}
+	}
+	&_block {
+		text-transform: uppercase;
+		padding: 15px;
+		height: 200px;
+		border-bottom: 1px solid #232526;
+		&-text {
+		color: #fff;
+		font-size: 12px;
+		line-height: 16px;	
+		margin-bottom: 6px;
+		max-height: 64px;
+		overflow: hidden;
+		}
+		.raid_calendar-button {
+			font-size: 13px;
+			height: 35px;
+			line-height: 35px;
+			padding: 0 15px;
+		}
+	}
+	&_time {
+		color: #636f6f;
+		font-family: "AvenirNextRegular", sans-serif;
+		font-size: 12px;
+	}
+	&_sticker {
+		margin: 6px 0;
+		border-radius: 3px;
+		font-size: 12px;
+		color: #1c1e1e;
+		background-color: #1c5b1f;
+		height: 25px;
+		line-height: 25px;
+		padding:0 8px;
+		text-align: center;
+		display: inline-block;
+		&.raid_name {
+			background-color: #4b4d4d;
+		}
+	}
+	&_archive {
+		.calendar_block {
+			opacity: 0.3;
+		}
+	}
+}
 .footer {
 	background: url(../img/bg_footer.png) no-repeat center;
 	padding-top: 60px;
